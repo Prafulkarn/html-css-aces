@@ -1,0 +1,336 @@
+*{
+    /* clearing default size */
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+/* color:Adobe color,colors,colorspace,colorhunt 
+Fonts:Google fonts,CDN fonts*/
+/* Css variables */
+:root{
+    --black-color:#000;
+    --dark-100: #141414;
+    --dark-200: #292929;
+    --dark-300: #404040;
+    --dark-400: #585858;
+    --dark-500: #727272;
+    --dark-600: #8c8c8c;
+    --header-size: 32px;
+
+}
+/* body{
+    background:var(--black-color);
+} */
+
+html,
+body{
+    min-height: 100vh;
+    overflow-x:hidden;
+}
+body{
+    background-color: var(--dark-100);
+    color: white;
+}
+/* header */
+/* header,nav,.nav-menu{
+    display:flex;
+} */
+nav{
+    display:flex;
+    gap:30px;
+    justify-content: space-between;
+}
+.nav-menu ul{
+    display: flex;
+    gap:30px;
+    list-style-type:none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition:all 0.2s ease-in;
+}
+/* hover tag brings hover effect i.e shows color on anchor tags */
+/* pseudo clases */
+a:hover{
+    color:var(--dark-300);    
+}
+header{
+    padding:20px 40px;
+}
+.logo a{
+    font-size: 32px;
+    font-weight:600;
+}
+h2{
+    font-size:40px;
+}
+p{
+    font-size:16px;
+}
+.btn{
+    background-color: var(--dark-500);
+    padding: 3px 3px;
+    border-radius: 2px;
+    width:fit-content;
+}
+.btn:hover{
+    background-color: var(--dark-200);
+    color: white;
+   
+}
+.nav-menu a{
+    font-size:24px;
+}
+#home{
+    display:flex;
+    /* justify-content: space-between; */
+    /* height:600px; */
+    height:70vh;
+    padding:10px 40px;
+    align-items: center;
+}
+.left,.right{
+    width:50%;
+}
+.left{
+    background-color: black;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+.right{
+    background-color:black;
+    height:100%
+}
+.right{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ .right{
+    width: 50%;
+    position:relative;
+ }
+ 
+.right.card{
+    width:80%;
+    margin:0 auto;
+    position: absolute;
+    top:50%;
+    transform: translate(0,-50%);
+}
+.rotate-45,
+.rotate-minus-45 {
+  width: 600px;
+  height: 400px;
+  background-color: transparent;
+  border: 1px solid var(--dark-500);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.right .card img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+  filter: brightness(0.3);
+}
+
+.rotate-minus-45 {
+  transform: rotate(-55deg);
+  filter: brightness(0.3);
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 12px;
+
+}
+.stroke-text{
+    -webkit-text-stroke: 2px var(--dark-300);
+    color:black;
+}
+.right img{
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius: 10px;
+}
+section{
+    padding:60px 40px;
+}
+.header{
+    /* making the header center  using margin*/
+    margin: 0 auto;  
+    /* margin-left: auto; */
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    width:500px;
+    margin-bottom: 40px;
+}
+.header h1{
+    font-size:40px;
+    font-weight: 800;
+}
+.header p{
+  text-align:center;
+  font-size:18px;
+}
+/* Projects */
+.project{
+    display:flex;
+    flex-direction: column;
+    gap:14px;
+    background-color: var(--dark-100);
+    padding: 20px 40px;
+    border-radius: 7px;
+    width:350px;
+    box-shadow: 1px 1px 10px white;
+}   
+.project-image img{
+    width:300px;
+    height:200px;
+    object-fit: cover;
+}
+.project-info{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.project-title{
+    font-size: 32px;
+
+}
+.project-desc{
+    font-size: 14px;
+}
+.status{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-more-btn{
+    background-color: var(--dark-200);
+    padding: 10px 20px;
+
+}
+.project-list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    place-items: center;
+
+}
+/* contact */
+#contact{
+    padding: 60px 0px;
+}
+.background{
+    background:url("../assests/ironman.jpg") no-repeat;
+    background-size:cover;
+    background-position: top;
+    filter:brightness(0.5);
+    width:100%;
+    height:500px;
+}
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    position: relative;
+  }
+  
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    filter: invert(90%);
+  }
+  
+  .contact-form {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: var(--dark-100);
+    border-radius: 7px;
+  }
+  
+  .contact-form h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--dark-500);
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--dark-500);
+  }
+  
+  .form-group button {
+    padding: 10px;
+    color: white;
+    width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+  }
+  
+  .form-group button:hover {
+    background-color: var(--dark-300);
+  }
+  textarea{
+    max-width: 100%;
+    max-height:200px;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
